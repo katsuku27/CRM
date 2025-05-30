@@ -6,7 +6,7 @@ const Navbar = () => {
         <nav className="bg-gradient-to-r from-[#172230] to-[#487D96] fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <div className="flex items-center">
-                    <Link href="/home" className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <Link href="/home" className="flex items-center rtl:space-x-reverse">
                         <img src="/images/logo.png" alt="logo" className="w-8 h-8" />
                         <span className="text-white font-bold text-xl">rcode</span>
                     </Link>
@@ -15,11 +15,6 @@ const Navbar = () => {
                         <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
                             <li>
                                 <Link href="#" className="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500">
-                                    Home
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                                     Browse
                                 </Link>
                             </li>

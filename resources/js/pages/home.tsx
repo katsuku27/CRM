@@ -15,19 +15,19 @@ const games = [
 export default function Home() {
     return (
         <Layout title="Home Page">
-            <div className="w-full min-h-screen overflow-y-auto px-6 py-8 pt-24 mx-auto">
+            <div className="w-full min-h-screen overflow-y-auto px-6 py-8 mx-auto">
                 <div className="max-w-3xl mx-auto">
 
                     {/* Search box (dummy placeholder) */}
                     <div className="bg-white h-32 rounded-xl mb-24 shadow-md"></div>
 
                     {/* Section: Popular */}
-                    <div className="flex justify-between items-center mb-4">
+                    <div className="flex justify-between items-center mb-10">
                         <h2 className="text-white text-xl font-bold">Popular</h2>
                         <a href="#" className="text-white text-sm font-semibold opacity-70 hover:underline">View more</a>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-10">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-24">
                         {games.map((game, index) => (
                             <div key={`popular-${index}`} className="flex flex-col items-center space-y-2">
                                 <div className="w-24 h-24 rounded-lg overflow-hidden shadow-md bg-gray-800">
@@ -39,7 +39,7 @@ export default function Home() {
                     </div>
 
                     {/* Section: New Game */}
-                    <div className="mb-4">
+                    <div className="mb-10">
                         <h2 className="text-white text-xl font-bold">New Game</h2>
                     </div>
 
