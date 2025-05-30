@@ -9,4 +9,11 @@ class Diskon extends Model
 {
     /** @use HasFactory<\Database\Factories\DiskonFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'game_id',
+        'percentage',
+        'start_date',
+        'end_date',
+    ];
 }
