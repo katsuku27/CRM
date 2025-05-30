@@ -21,5 +21,9 @@ Route::get('/frontend/register', function () {
     return view('frontend.register');
 });
 
+Route::get('/frontend/home', function () {
+    return view('frontend.home');
+});
+
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
