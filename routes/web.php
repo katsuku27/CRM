@@ -13,17 +13,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('dashboard');
 });
 
-Route::get('/frontend/login', function () {
-    return view('frontend.login');
-});
-
-Route::get('/frontend/register', function () {
-    return view('frontend.register');
-});
-
-Route::get('/frontend/home', function () {
-    return view('frontend.home');
-});
+Route::get('/home', function () {
+    return Inertia::render('home');
+})->name('home');
 
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
