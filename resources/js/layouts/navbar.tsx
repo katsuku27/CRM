@@ -28,7 +28,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="flex space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <a href="/login"><button className="text-white font-bold border border-white bg-transparent hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2">
+                    <a href="/login"><button className="text-white font-bold border border-white bg-transparent hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2 hover:cursor-pointer">
                         Login
                     </button></a>
                     <button data-collapse-toggle="navbar-sticky" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">

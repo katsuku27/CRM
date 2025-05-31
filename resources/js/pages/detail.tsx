@@ -28,10 +28,22 @@ export default function MLTopupPage() {
                         <div className="space-y-4 rounded-xl bg-gradient-to-b from-[#0B1FCD] to-[#8C7CF3] p-6 shadow-md">
                             <p className="text-3xl font-bold">① Enter User ID</p>
                             <div className="flex flex-col gap-4 md:flex-row">
-                                <input type="text" placeholder="Enter User ID" className="w-full border border-white px-4 py-2 text-center font-bold text-white" />
-                                <input type="text" placeholder="Zone ID" className="w-full border border-white px-4 py-2 text-center font-bold text-white" />
+                                <input
+                                    type="text"
+                                    placeholder="Enter User ID"
+                                    className="w-full border border-white px-4 py-2 text-center font-bold text-white"
+                                />
+                                <input
+                                    type="text"
+                                    placeholder="Zone ID"
+                                    className="w-full border border-white px-4 py-2 text-center font-bold text-white"
+                                />
                             </div>
-                            <p className='text-sm font-bold'>Untuk mengetahui User ID Anda, silakan klik menu profile dibagian kiri atas pada menu utama game. User ID akan terlihat dibagian bawah Nama Karakter Game Anda. Silakan masukkan User ID Anda untuk menyelesaikan transaksi. Contoh : 12345678(1234).</p>
+                            <p className="text-sm font-bold">
+                                Untuk mengetahui User ID Anda, silakan klik menu profile dibagian kiri atas pada menu utama game. User ID akan
+                                terlihat dibagian bawah Nama Karakter Game Anda. Silakan masukkan User ID Anda untuk menyelesaikan transaksi. Contoh :
+                                12345678(1234).
+                            </p>
                         </div>
 
                         {/* Step 2 */}
@@ -49,7 +61,7 @@ export default function MLTopupPage() {
                                     { label: '568 Diamonds', price: 'Rp125.000' },
                                     { label: 'Weekly Diamond Pass', price: 'Rp27.000' },
                                 ].map((item, i) => (
-                                    <div key={i} className="rounded-lg bg-white p-4 text-center text-black shadow transition hover:scale-105">
+                                    <div key={i} className="rounded-lg bg-white p-4 text-center text-black shadow transition hover:scale-105 hover:cursor-pointer">
                                         <p className="font-bold">{item.label}</p>
                                         <p className="text-sm text-gray-700">{item.price}</p>
                                     </div>
@@ -61,14 +73,22 @@ export default function MLTopupPage() {
                         <div className="space-y-4 rounded-xl bg-gradient-to-b from-[#0B1FCD] to-[#8C7CF3] p-6 shadow-md">
                             <p className="text-3xl font-bold">③ Choose Payment Method</p>
                             <div className="space-y-2">
-                                {['DANA', 'OVO', 'Gopay', 'ShopeePay', 'Paypal', 'Bank Transfer'].map((method, i) => (
-                                    <div
+                                {[
+                                    { id: 'dana', img: '/images/dana.png' },
+                                    { id: 'ovo', img: '/images/ovo.png' },
+                                    { id: 'gopay', img: '/images/gopay.png' },
+                                    { id: 'spay', img: '/images/spay.png' },
+                                    { id: 'paypal', img: '/images/paypal.png' },
+                                    { id: 'tf', img: '/images/tf.png' },
+                                ].map((method, i) => (
+                                    <label
                                         key={i}
+                                        htmlFor={method.id}
                                         className="flex cursor-pointer items-center gap-3 rounded-lg bg-white px-4 py-2 text-black shadow transition hover:scale-[1.01]"
                                     >
-                                        <input type="radio" name="payment" className="accent-blue-600" />
-                                        <span>{method}</span>
-                                    </div>
+                                        <input type="radio" name="payment" id={method.id} className="accent-blue-600" />
+                                        <img src={method.img} alt={method.id} className="h-12" />
+                                    </label>
                                 ))}
                             </div>
                         </div>
@@ -82,8 +102,9 @@ export default function MLTopupPage() {
                                 placeholder="Enter Your Email"
                                 className="w-full border border-white px-4 py-2 text-center font-bold text-white"
                             />
-                            <input type="checkbox" />{' Yes, I would like to receive news and promotions via Email '}
-                            <button className="w-full rounded-xl bg-[#D5F7DB] py-3 font-bold text-black transition hover:brightness-110">
+                            <input type="checkbox" className='hover:cursor-pointer'/>
+                            {' Yes, I would like to receive news and promotions via Email '}
+                            <button className="w-full rounded-xl bg-[#D5F7DB] hover:bg-[#08AD36] hover:cursor-pointer py-3 font-bold text-black transition hover:brightness-110">
                                 Place Order
                             </button>
                         </div>
