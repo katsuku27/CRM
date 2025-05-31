@@ -18,7 +18,7 @@ export default function Wrap() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
         {purchases.map((item, index) => (
           <React.Fragment key={index}>
-            <div className="bg-gradient-to-r from-[#4D3DFF] to-[#A167FF] rounded-xl p-4 shadow-md flex flex-col justify-between">
+            <div className="bg-gradient-to-r from-[#0B1FCD] to-[#8C7CF3] rounded-xl p-4 shadow-md flex flex-col justify-between">
             <div className="text-center">
               <p className="text-sm font-semibold mb-1">{item.game}</p>
               <p className="text-2xl font-bold">{item.amount}</p>
@@ -31,7 +31,7 @@ export default function Wrap() {
             />
             </div>
 
-            <div className="bg-gradient-to-r from-[#2D49FF] to-[#8C5CFF] rounded-xl flex items-center justify-center text-3xl font-bold shadow-md">
+            <div className="bg-gradient-to-r from-[#0B1FCD] to-[#8C7CF3] rounded-xl flex items-center justify-center text-3xl font-bold shadow-md">
             {item.order}
             </div>
           </React.Fragment>

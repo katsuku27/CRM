@@ -1,55 +1,95 @@
-import React from 'react';
 import Layout from '@/layouts/layout';
 
-const purchases = [
-  { game: 'Mobile Legend', amount: 1000, unit: 'diamonds purchased', order: 1 },
-  { game: 'Free Fire', amount: 250, unit: 'diamonds purchased', order: 2 },
-  { game: 'Genshin Impact', amount: 100, unit: 'Genesis Crystals purchased', order: 3 },
-];
+export default function MLTopupPage() {
+    return (
+        <Layout title="Mobile Legends Top Up">
+            <div className="min-h-screen px-4 py-10 text-white">
+                <div className="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row">
+                    {/* KIRI: Gambar + Info */}
+                    <div className="space-y-6 md:w-1/3">
+                        <img src="/images/ml-banner.png" alt="Mobile Legends" className="h-60 w-full rounded-xl object-cover shadow-lg" />
+                        <div className="space-y-3 text-sm md:text-base">
+                            <h2 className="text-2xl font-bold">Mobile Legends</h2>
+                            <p>
+                                Arcade offers easy, secure and practical ML top up. Pay conveniently with Gopay, OVO, DANA, Bank Transfer, Shopeepay,
+                                Paypal.
+                            </p>
+                            <p>
+                                Buy Mobile Legends Diamonds and Weekly Diamond Pass in seconds! Simply enter your Mobile Legends user ID and zone ID,
+                                select the items you wish to purchase, complete the payment, and the items will be sent directly to your Mobile
+                                Legends account.
+                            </p>
+                        </div>
+                    </div>
 
-export default function Wrap() {
-  return (
-    <Layout title="Wrap">
-    <div className="w-full min-h-screen px-6 py-10 text-white">
-      <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-4xl font-semibold mb-10">Your highlighted purchase this year</h2>
+                    {/* KANAN: Langkah Top Up */}
+                    <div className="space-y-6 md:w-2/3">
+                        {/* Step 1 */}
+                        <div className="space-y-4 rounded-xl bg-gradient-to-b from-[#0B1FCD] to-[#8C7CF3] p-6 shadow-md">
+                            <p className="text-3xl font-bold">① Enter User ID</p>
+                            <div className="flex flex-col gap-4 md:flex-row">
+                                <input type="text" placeholder="Enter User ID" className="w-full border border-white px-4 py-2 text-center font-bold text-white" />
+                                <input type="text" placeholder="Zone ID" className="w-full border border-white px-4 py-2 text-center font-bold text-white" />
+                            </div>
+                            <p className='text-sm font-bold'>Untuk mengetahui User ID Anda, silakan klik menu profile dibagian kiri atas pada menu utama game. User ID akan terlihat dibagian bawah Nama Karakter Game Anda. Silakan masukkan User ID Anda untuk menyelesaikan transaksi. Contoh : 12345678(1234).</p>
+                        </div>
 
-        {/* Purchase Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-        {purchases.map((item, index) => (
-          <React.Fragment key={index}>
-            <div className="bg-gradient-to-r from-[#4D3DFF] to-[#A167FF] rounded-xl p-4 shadow-md flex flex-col justify-between">
-            <div className="text-center">
-              <p className="text-sm font-semibold mb-1">{item.game}</p>
-              <p className="text-2xl font-bold">{item.amount}</p>
-              <p className="text-xs mt-1 text-white/80">{item.unit}</p>
-            </div>
-            <img
-              src="/images/diamond.png" // Replace with actual image path
-              alt="diamond"
-              className="w-10 h-10 mt-4 ml-auto"
-            />
-            </div>
+                        {/* Step 2 */}
+                        <div className="space-y-4 rounded-xl bg-gradient-to-b from-[#0B1FCD] to-[#8C7CF3] p-6 shadow-md">
+                            <p className="text-3xl font-bold">② Choose Nominal Top Up</p>
+                            <div className="grid grid-cols-2 gap-4">
+                                {[
+                                    { label: '5 Diamonds', price: 'Rp1.500' },
+                                    { label: '19 Diamonds', price: 'Rp4.800' },
+                                    { label: '53 Diamonds', price: 'Rp13.000' },
+                                    { label: '77 Diamonds', price: 'Rp18.000' },
+                                    { label: '154 Diamonds', price: 'Rp36.000' },
+                                    { label: '218 Diamonds', price: 'Rp51.000' },
+                                    { label: '366 Diamonds', price: 'Rp85.000' },
+                                    { label: '568 Diamonds', price: 'Rp125.000' },
+                                    { label: 'Weekly Diamond Pass', price: 'Rp27.000' },
+                                ].map((item, i) => (
+                                    <div key={i} className="rounded-lg bg-white p-4 text-center text-black shadow transition hover:scale-105">
+                                        <p className="font-bold">{item.label}</p>
+                                        <p className="text-sm text-gray-700">{item.price}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
 
-            <div className="bg-gradient-to-r from-[#2D49FF] to-[#8C5CFF] rounded-xl flex items-center justify-center text-3xl font-bold shadow-md">
-            {item.order}
-            </div>
-          </React.Fragment>
-        ))}
-        </div>
+                        {/* Step 3 */}
+                        <div className="space-y-4 rounded-xl bg-gradient-to-b from-[#0B1FCD] to-[#8C7CF3] p-6 shadow-md">
+                            <p className="text-3xl font-bold">③ Choose Payment Method</p>
+                            <div className="space-y-2">
+                                {['DANA', 'OVO', 'Gopay', 'ShopeePay', 'Paypal', 'Bank Transfer'].map((method, i) => (
+                                    <div
+                                        key={i}
+                                        className="flex cursor-pointer items-center gap-3 rounded-lg bg-white px-4 py-2 text-black shadow transition hover:scale-[1.01]"
+                                    >
+                                        <input type="radio" name="payment" className="accent-blue-600" />
+                                        <span>{method}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
 
-          {/* Total Spending */}
-          <div className="text-center mb-4 text-white font-semibold">
-            <p className="text-2xl mb-4">How much 💰💰💰 you’ve spent</p>
-            <div className="flex justify-center">
-              <div className="w-124 bg-gradient-to-r from-[#2D49FF] to-[#8C5CFF] rounded-xl py-6 text-2xl font-bold shadow-md text-center">
-                Rp<em className="not-italic">xx.xxx.xxx,00</em>
-                <p className="text-sm font-normal mt-1">in a year</p>
-              </div>
+                        {/* Step 4 */}
+                        <div className="space-y-4 rounded-xl bg-gradient-to-b from-[#0B1FCD] to-[#8C7CF3] p-6 shadow-md">
+                            <p className="text-3xl font-bold">④ Detail</p>
+                            <p className="text-sm font-bold"> Proof of payment for your purchase will be sent to your email address </p>
+                            <input
+                                type="email"
+                                placeholder="Enter Your Email"
+                                className="w-full border border-white px-4 py-2 text-center font-bold text-white"
+                            />
+                            <input type="checkbox" />{' Yes, I would like to receive news and promotions via Email '}
+                            <button className="w-full rounded-xl bg-[#D5F7DB] py-3 font-bold text-black transition hover:brightness-110">
+                                Place Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </Layout>
-  );
+        </Layout>
+    );
 }
