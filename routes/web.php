@@ -29,9 +29,9 @@ Route::get('/admin/statistic', function () {
     return Inertia::render('admin/statistic');
 })->name('statistic');
 
-Route::get('/admin/users', function () {
-    return Inertia::render('admin/users');
-})->name('users');
+// Route::get('/admin/users', function () {
+//     return Inertia::render('admin/users');
+// })->name('users');
 
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';

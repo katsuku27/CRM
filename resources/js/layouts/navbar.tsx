@@ -28,10 +28,10 @@ const Navbar = () => {
                 </div>
 
                 <div className="flex space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <a href="/login"><button className="text-white font-bold border border-white bg-transparent hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2 hover:cursor-pointer">
+                    <a href="/admin"><button className="text-white font-bold border border-white bg-transparent hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2 hover:cursor-pointer">
                         Login
                     </button></a>
-                    <a href="/login"><button className="ml-2 text-white font-bold border border-white bg-transparent hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2 hover:cursor-pointer">
+                    <a href="/settings/profile"><button className="ml-2 text-white font-bold border border-white bg-transparent hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2 hover:cursor-pointer">
                         User
                     </button></a>
                 </div>
