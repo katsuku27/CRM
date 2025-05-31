@@ -31,7 +31,7 @@ export default function Home() {
                         {games.map((game, index) => (
                             <div key={`popular-${index}`} className="flex flex-col items-center space-y-2">
                                 <div className="w-24 h-24 rounded-lg overflow-hidden shadow-md bg-gray-800">
-                                    <img src={game.img} alt={game.title} className="w-full h-full object-cover" />
+                                    <a href="/detail"> <img src={game.img} alt={game.title} className="w-full h-full object-cover" /> </a>
                                 </div>
                                 <p className="text-white text-xs text-center font-medium">{game.title}</p>
                             </div>
