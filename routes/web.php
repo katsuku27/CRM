@@ -17,5 +17,9 @@ Route::get('/home', function () {
     return Inertia::render('home');
 })->name('home');
 
+Route::get('/wrap', function () {
+    return Inertia::render('wrap');
+})->name('wrap');
+
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';

@@ -14,7 +14,7 @@ const games = [
 
 export default function Home() {
     return (
-        <Layout title="Home Page">
+        <Layout title="Arcode">
             <div className="w-full min-h-screen overflow-y-auto px-6 py-8 mx-auto">
                 <div className="max-w-3xl mx-auto">
 
