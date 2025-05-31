@@ -12,9 +12,9 @@ export default function Layout({ children, title = 'Arcode' }: Props) {
             <head>
                 <title>{title}</title>
             </head>
-            <body className="font-sans bg-gradient-to-b from-[#2F5063] via-[#172230] to-[#2F5063] min-h-screen">
+            <body className="font-sans bg-gradient-to-b from-[#2F5063] via-[#172230] to-[#2F5063] w-full min-h-screen">
                 <Navbar />
-                <main className="pt-24 px-6">
+                <main className="pt-17">
                     {children}
                 </main>
             </body>

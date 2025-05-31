@@ -25,13 +25,13 @@ Route::get('/detail', function () {
     return Inertia::render('detail');
 })->name('detail');
 
-Route::get('/admindashboard', function () {
-    return Inertia::render('admindashboard');
-})->name('admindashboard');
+Route::get('/admin/statistic', function () {
+    return Inertia::render('admin/statistic');
+})->name('statistic');
 
-Route::get('/userdashboard', function () {
-    return Inertia::render('userdashboard');
-})->name('userdashboard');
+Route::get('/admin/users', function () {
+    return Inertia::render('admin/users');
+})->name('users');
 
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
