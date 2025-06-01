@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Game;
+use App\Models\Currency;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Currency extends Model
 {
@@ -12,9 +14,21 @@ class Currency extends Model
 
     protected $fillable = [
         'name',
-        'symbol',
-        'exchange_rate',
+        'icon',
+        'currency',
+        'price',
+        'game_id',
         'created_at',
         'updated_at',
     ];
+
+    public function game()
+    {
+        return $this->belongsTo(Game::class);
+    }
+
+    public function currencies()
+    {
+    return $this->hasMany(Currency::class);
+    }
 }

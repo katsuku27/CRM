@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('histories', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')
+                ->constrained('users')
+                ->onDelete('cascade');
+            $table->foreignId('game_id')
+                ->constrained('games')
+                ->onDelete('cascade');
+            $table->foreignId('currency_id')
+                ->constrained('currencies')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
