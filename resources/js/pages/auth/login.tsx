@@ -36,7 +36,7 @@ export default function Login({ status, canResetPassword }: LoginProps) {
     return (
         <div className="bg-[#172230] flex items-center justify-center h-screen font-sans">
             <div className="w-[300px]">
-                <Head title="Log in" />
+                <Head title="Login" />
 
                 {/* Logo */}
                 <div className="flex justify-center mb-6 text-white text-5xl font-bold">
