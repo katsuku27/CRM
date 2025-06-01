@@ -13,8 +13,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('dashboard');
 });
 
-<<<<<<< HEAD
-=======
 Route::get('/wrap', function () {
     return Inertia::render('wrap');
 })->name('wrap');
@@ -31,6 +29,5 @@ Route::get('/account/history', function () {
     return Inertia::render('account/history');
 })->name('history');
 
->>>>>>> 696d1326923a63631449517fea585fe47dc3b3a1
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
